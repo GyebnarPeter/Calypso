@@ -13,6 +13,20 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: white;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #4e4e4e;
+  border-radius: 20px;
+  border: 2px solid white;
+}
+
 /* =============== HEADER =============== */
 .header-wrapper {
   width: 100%;
@@ -21,6 +35,7 @@ body {
   top: 0;
   left: 0;
   background: white;
+  z-index: 100;
   transition: 0.5s;
 }
 
@@ -164,7 +179,7 @@ nav ul li:first-child:before {
 .about-us {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto 100px auto;
   text-align: center;
 }
 .about-us h1 {
@@ -190,7 +205,8 @@ nav ul li:first-child:before {
 .about-us-buttons {
   margin-bottom: 30px;
 }
-.about-us-buttons button {
+.about-us-buttons a {
+  text-decoration: none;
   background: transparent;
   border-width: 0 0 1px 0;
   border-style: solid;
@@ -200,10 +216,15 @@ nav ul li:first-child:before {
   margin: 0 20px;
   font-size: 1em;
   font-family: "Montserrat", sans-serif;
+  transition: 0.5s;
   cursor: pointer;
 }
-.about-us-buttons button:first-child {
+.about-us-buttons a:hover {
   color: #8cc63f;
+}
+
+.about-us-active {
+  color: #8cc63f !important;
 }
 
 .about-us-description {
@@ -211,10 +232,101 @@ nav ul li:first-child:before {
   margin: 0 auto;
   font-size: 14px;
   line-height: 1.5;
+  transition: 0.5s;
 }
 
-.content {
-  height: 500px;
+/* =============== PRODUCT =============== */
+.product-wrapper {
+  width: 100%;
+  text-align: center;
+  margin: 200px 0 100px 0;
+}
+.product-wrapper h1 {
+  font-size: 5em;
+  line-height: 0;
+  color: rgba(0, 0, 0, 0.1);
+}
+.product-wrapper h1 span {
+  color: #4e4e4e;
+  font-size: 0.4em;
+  display: inline-block;
+  transform: translateY(-10px);
+}
+.product-wrapper h1:after {
+  content: "";
+  width: 70px;
+  height: 3px;
+  background: #8cc63f;
+  margin: 50px auto;
+  display: block;
+}
+
+.product {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 30px;
+}
+.product a {
+  position: relative;
+  overflow: hidden;
+}
+.product a img {
+  width: 100%;
+  transition: 0.3s;
+}
+.product a .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  transition: 0.3s;
+}
+.product a .overlay .text {
+  text-align: left;
+  margin: 40px 0 0 60px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  transition: 0.6s;
+  transform: translateX(50px);
+}
+.product a .overlay .text span {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 0.6em;
+}
+.product a:hover img {
+  transform: scale(1.1);
+}
+.product a:hover .overlay {
+  opacity: 1;
+}
+.product a:hover .text {
+  transform: translateX(-10px);
+}
+
+/* =============== FOOTER =============== */
+footer {
+  width: 100%;
+  text-align: center;
+  background: #161616;
+}
+footer h2 {
+  font-size: 4em;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 80px;
+  color: #88a566;
 }
 
 @media screen and (max-width: 1200px) {
@@ -276,6 +388,10 @@ nav ul li:first-child:before {
   .welcome-screen-img img {
     max-height: 500px;
   }
+
+  .product {
+    grid-template-columns: auto auto;
+  }
 }
 @media screen and (max-width: 768px) {
   header {
@@ -291,7 +407,7 @@ nav ul li:first-child:before {
   .welcome-screen {
     height: unset;
     max-width: 100%;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: center;
   }
 
@@ -316,10 +432,18 @@ nav ul li:first-child:before {
   .about-us h1 {
     font-size: 2.5em;
   }
+  .about-us h1 span {
+    font-size: 0.8em;
+    transform: translateY(-40px);
+  }
 
-  .about-us-buttons button {
+  .about-us-buttons a {
     font-size: 12px;
     margin: 0;
+  }
+
+  .product {
+    grid-template-columns: auto;
   }
 }
 
