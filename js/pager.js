@@ -1,21 +1,3 @@
-// Navigation functions
-$(".nav-btn").click( () => {
-    $("nav").slideToggle()
-});
-
-window.onscroll = () => {
-    let headerWrapper = document.querySelector(".header-wrapper");
-    let nav = document.querySelector("nav");
-
-    if (document.documentElement.scrollTop > 100) {
-        headerWrapper.classList.add("header-wrapper-scroll");
-        nav.style.top = "70px";
-    } else {
-        headerWrapper.classList.remove("header-wrapper-scroll");
-        nav.style.top = "100px";
-    }
-}
-
 // About us pager
 let calypsoDescription = {
     branding: `<p>We're a close team of creatives, designers & developers who work together to create beautiful, engaging digital experiences. Our team is specially designed to create successful, custom, innovative digital products from the initial concept through full product launch. From whiteboard sketches to pixel-perfect designs.</p>
