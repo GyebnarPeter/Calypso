@@ -139,6 +139,10 @@ nav {
     }
 }
 
+.nav-active-link {
+    color: $brand-color;
+}
+
 .nav-btn {
     cursor: pointer;
     display: none;
@@ -153,24 +157,34 @@ nav {
 }
 
 
-/* =============== WELCOME SCREEN =============== */
+/* =============== SLIDER =============== */
 
-.welcome-screen-wrapper {
+.slider-wrapper {
     width: 100%;
     height: 100vh;
     background: white;
 }
 
-.welcome-screen {
+.slider {
     height: 100vh;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
+    position: relative;
 }
 
-.welcome-screen-text {
+.slider-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: 2s;
+}
+
+.slider-text {
     flex-grow: 1;
     flex-basis: 0;
 
@@ -203,8 +217,8 @@ nav {
     }
 }
 
-.welcome-screen-img {
-    displaY: flex;
+.slider-img {
+    display: flex;
     justify-content: center;
     flex-grow: 1;
     flex-basis: 0;
@@ -512,7 +526,7 @@ nav {
         display: flex;
 
         span {
-            background: $brand-color;
+            background: rgb(226, 226, 226);
             height: 50px;
             width: 150px;
             padding: 0 10px;
@@ -524,6 +538,11 @@ nav {
             font-weight: 500;
             color: #282c2c;
             cursor: pointer;
+            transition: .3s;
+        }
+
+        span:hover {
+            background: lightgreen;
         }
     }
 
@@ -568,6 +587,10 @@ nav {
             cursor: pointer;
         }
 
+        button:hover {
+            background: lightgreen;
+        }
+
         .price-form {
             position: absolute;
             top: 0;
@@ -579,7 +602,7 @@ nav {
             justify-content: center;
             background: rgb(226, 226, 226);
             padding: 0 15px;
-            opacity: 1;
+            opacity: 0;
             transition: 1s;
         }
 
@@ -598,6 +621,15 @@ nav {
             transition: 1s;
         }
     }
+}
+
+.active-form {
+    opacity: 1 !important;
+    z-index: 10;
+}
+
+.offer-box-button-active {
+    background-color: $brand-color !important;
 }
 
 #map {
@@ -657,11 +689,11 @@ footer {
         display: block;
     }
 
-    .welcome-screen {
+    .slider {
         max-width: 992px;
     }
 
-    .welcome-screen-text {
+    .slider-text {
     
         h3 {
             font-size: 3em;
@@ -677,22 +709,22 @@ footer {
         max-width: 768px;
     }
 
-    .welcome-screen-wrapper {
+    .slider-wrapper {
         max-width: 100%;
     }
 
-    .welcome-screen {
+    .slider {
         max-width: 768px;
     }
 
-    .welcome-screen-text {
+    .slider-text {
 
         h3 {
             font-size: 2.7em;
         }
     }
 
-    .welcome-screen-img {
+    .slider-img {
 
         img {
             max-height: 500px;
@@ -741,19 +773,19 @@ footer {
         padding: 0 30px;
     }
 
-    .welcome-screen-wrapper {
+    .slider-wrapper {
         height: unset;
         margin-top: 100px;
     }
 
-    .welcome-screen {
+    .slider {
         height: unset;
         max-width: 100%;
         flex-direction: column;
         justify-content: center;
     }
 
-    .welcome-screen-text {
+    .slider-text {
         text-align: center;
 
         h3 {
@@ -765,7 +797,7 @@ footer {
         }
     }
 
-    .welcome-screen-img {
+    .slider-img {
 
         img {
             max-width: 600px;
@@ -805,9 +837,5 @@ footer {
         .offer-box {
             margin: 0;
         }
-
-        /* .offer-forms {
-            position: unset;
-        } */
     }
 }

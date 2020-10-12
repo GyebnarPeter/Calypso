@@ -3,6 +3,19 @@ $(document).ready(function(){
         $(".nav-btn").click( () => {
             $("nav").slideToggle()
         });
+        
+        // Page test for link colors
+        let contact = /kapcsolat/;
+        let pruduct = /index/;
+        let page = window.location.href;
+
+        if (contact.test(page)) {
+            console.log("true");
+            
+        } else {
+            console.log(false);
+        }
+        
     });
 });
 

@@ -110,6 +110,10 @@ nav ul li:first-child:before {
   display: none;
 }
 
+.nav-active-link {
+  color: #8cc63f;
+}
+
 .nav-btn {
   cursor: pointer;
   display: none;
@@ -122,43 +126,53 @@ nav ul li:first-child:before {
   margin: 3px 0;
 }
 
-/* =============== WELCOME SCREEN =============== */
-.welcome-screen-wrapper {
+/* =============== SLIDER =============== */
+.slider-wrapper {
   width: 100%;
   height: 100vh;
   background: white;
 }
 
-.welcome-screen {
+.slider {
   height: 100vh;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
+  position: relative;
 }
 
-.welcome-screen-text {
+.slider-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: 2s;
+}
+
+.slider-text {
   flex-grow: 1;
   flex-basis: 0;
 }
-.welcome-screen-text h3 {
+.slider-text h3 {
   font-family: "Montserrat", sans-serif;
   font-size: 4em;
   line-height: 50px;
   margin-bottom: 0;
 }
-.welcome-screen-text h3 span {
+.slider-text h3 span {
   font-size: 2em;
   color: rgba(0, 0, 0, 0.3);
 }
-.welcome-screen-text p {
+.slider-text p {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 14px;
   font-weight: 600;
 }
-.welcome-screen-text p:before {
+.slider-text p:before {
   content: "";
   width: 70px;
   height: 3px;
@@ -167,13 +181,13 @@ nav ul li:first-child:before {
   display: block;
 }
 
-.welcome-screen-img {
-  displaY: flex;
+.slider-img {
+  display: flex;
   justify-content: center;
   flex-grow: 1;
   flex-basis: 0;
 }
-.welcome-screen-img img {
+.slider-img img {
   height: 70vh;
   max-height: 800px;
 }
@@ -470,7 +484,7 @@ nav ul li:first-child:before {
   display: flex;
 }
 .offer-box .offer-buttons span {
-  background: #8cc63f;
+  background: #e2e2e2;
   height: 50px;
   width: 150px;
   padding: 0 10px;
@@ -482,6 +496,10 @@ nav ul li:first-child:before {
   font-weight: 500;
   color: #282c2c;
   cursor: pointer;
+  transition: 0.3s;
+}
+.offer-box .offer-buttons span:hover {
+  background: lightgreen;
 }
 .offer-box .offer-forms {
   position: relative;
@@ -519,6 +537,9 @@ nav ul li:first-child:before {
   font-weight: 500;
   cursor: pointer;
 }
+.offer-box .offer-forms button:hover {
+  background: lightgreen;
+}
 .offer-box .offer-forms .price-form {
   position: absolute;
   top: 0;
@@ -530,7 +551,7 @@ nav ul li:first-child:before {
   justify-content: center;
   background: #e2e2e2;
   padding: 0 15px;
-  opacity: 1;
+  opacity: 0;
   transition: 1s;
 }
 .offer-box .offer-forms .dealer-form {
@@ -546,6 +567,15 @@ nav ul li:first-child:before {
   padding: 0 15px;
   opacity: 0;
   transition: 1s;
+}
+
+.active-form {
+  opacity: 1 !important;
+  z-index: 10;
+}
+
+.offer-box-button-active {
+  background-color: #8cc63f !important;
 }
 
 #map {
@@ -596,11 +626,11 @@ footer h2 {
     display: block;
   }
 
-  .welcome-screen {
+  .slider {
     max-width: 992px;
   }
 
-  .welcome-screen-text h3 {
+  .slider-text h3 {
     font-size: 3em;
     line-height: 50px;
     margin-bottom: 0;
@@ -611,19 +641,19 @@ footer h2 {
     max-width: 768px;
   }
 
-  .welcome-screen-wrapper {
+  .slider-wrapper {
     max-width: 100%;
   }
 
-  .welcome-screen {
+  .slider {
     max-width: 768px;
   }
 
-  .welcome-screen-text h3 {
+  .slider-text h3 {
     font-size: 2.7em;
   }
 
-  .welcome-screen-img img {
+  .slider-img img {
     max-height: 500px;
   }
 
@@ -659,29 +689,29 @@ footer h2 {
     padding: 0 30px;
   }
 
-  .welcome-screen-wrapper {
+  .slider-wrapper {
     height: unset;
     margin-top: 100px;
   }
 
-  .welcome-screen {
+  .slider {
     height: unset;
     max-width: 100%;
     flex-direction: column;
     justify-content: center;
   }
 
-  .welcome-screen-text {
+  .slider-text {
     text-align: center;
   }
-  .welcome-screen-text h3 {
+  .slider-text h3 {
     font-size: 2em;
   }
-  .welcome-screen-text p:before {
+  .slider-text p:before {
     margin: 30px auto;
   }
 
-  .welcome-screen-img img {
+  .slider-img img {
     max-width: 600px;
     height: auto;
   }
@@ -709,9 +739,6 @@ footer h2 {
   .contact {
     height: unset;
     flex-direction: column;
-    /* .offer-forms {
-        position: unset;
-    } */
   }
   .contact .offer-box {
     margin: 0;

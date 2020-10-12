@@ -3,14 +3,21 @@ let priceBtn = document.querySelector(".price-btn"),
     dealerBtn = document.querySelector(".dealer-btn"),
     dealerForm = document.querySelector(".dealer-form");
 
+priceBtn.classList.add("offer-box-button-active");
+priceForm.classList.add("active-form");
+
 dealerBtn.onclick = () => {
-    priceForm.style.opacity = 0;
-    dealerForm.style.opacity = 1;
+    priceForm.classList.remove("active-form");
+    dealerForm.classList.add("active-form");
+    priceBtn.classList.remove("offer-box-button-active");
+    dealerBtn.classList.add("offer-box-button-active");
 }
 
 priceBtn.onclick = () => {
-    dealerForm.style.opacity = 0;
-    priceForm.style.opacity = 1;
+    priceForm.classList.add("active-form");
+    dealerForm.classList.remove("active-form");
+    priceBtn.classList.add("offer-box-button-active");
+    dealerBtn.classList.remove("offer-box-button-active");
 }
 
 // Initialize and add the map
