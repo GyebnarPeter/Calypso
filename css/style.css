@@ -61,10 +61,8 @@ header {
   font-family: "Montserrat", sans-serif;
 }
 
-.header-logo {
-  font-size: 1.5em;
-  font-weight: 700;
-  letter-spacing: 2px;
+.header-logo img {
+  width: 200px;
 }
 
 nav {
@@ -149,6 +147,7 @@ nav ul li:first-child:before {
   height: 100%;
   display: flex;
   align-items: center;
+  opacity: 0;
   transition: 2s;
 }
 
@@ -200,7 +199,7 @@ nav ul li:first-child:before {
 .about-us {
   width: 100%;
   max-width: 1200px;
-  margin: 200px auto;
+  margin: 100px auto;
   text-align: center;
 }
 .about-us h2 {
@@ -256,11 +255,15 @@ nav ul li:first-child:before {
   transition: 0.5s;
 }
 
+.about-us-logo {
+  margin-top: 100px;
+}
+
 /* =============== PRODUCT =============== */
 .product-wrapper {
   width: 100%;
   text-align: center;
-  margin: 200px 0 100px 0;
+  margin: 100px 0;
 }
 .product-wrapper h1 {
   font-size: 5em;
@@ -392,12 +395,19 @@ nav ul li:first-child:before {
 .product-box .product-data .product-description {
   flex-grow: 1;
   flex-basis: 0;
-  padding-right: 40px;
+  padding: 0 40px;
 }
 .product-box .product-data .product-details {
   flex-grow: 1;
   flex-basis: 0;
-  padding-left: 20px;
+  padding: 0 40px;
+}
+.product-box .product-data .product-details .download {
+  color: #3c3cf5;
+  cursor: pointer;
+}
+.product-box .product-data .product-details .download:hover {
+  text-decoration: underline;
 }
 
 /* =============== CONTACT =============== */
@@ -589,12 +599,9 @@ footer {
   text-align: center;
   background: #282c2c;
 }
-footer h2 {
-  font-size: 4em;
-  font-family: "Montserrat", sans-serif;
-  margin: 0;
-  padding: 80px;
-  color: #88a566;
+footer img {
+  width: 400px;
+  padding: 50px 0;
 }
 
 @media screen and (max-width: 1200px) {
@@ -604,6 +611,7 @@ footer h2 {
 
   nav {
     height: unset;
+    width: 100%;
     display: none;
     position: fixed;
     top: 100px;
@@ -669,9 +677,13 @@ footer h2 {
     border-width: 0 10px 10px 10px;
     border-style: solid;
     border-color: white;
+    display: flex;
+    align-items: center;
   }
   .product a .overlay .text {
-    margin: 40px 0 0 40px;
+    margin: 0 0 0 50px;
+    text-align: left;
+    transform: unset;
   }
   .product a:hover img {
     transform: scale(1.1);
@@ -690,19 +702,24 @@ footer h2 {
   }
 
   .slider-wrapper {
-    height: unset;
     margin-top: 100px;
   }
 
   .slider {
-    height: unset;
     max-width: 100%;
     flex-direction: column;
     justify-content: center;
   }
 
+  .slider-page {
+    display: flex;
+    flex-direction: column;
+  }
+
   .slider-text {
     text-align: center;
+    flex-grow: 0;
+    flex-basis: 0;
   }
   .slider-text h3 {
     font-size: 2em;
@@ -712,19 +729,20 @@ footer h2 {
   }
 
   .slider-img img {
-    max-width: 600px;
+    width: 300px;
     height: auto;
   }
 
   .about-us {
     margin: 100px 0;
   }
-  .about-us h1 {
-    font-size: 2.5em;
+  .about-us h2 {
+    font-size: 3.5em;
+    color: transparent;
   }
-  .about-us h1 span {
-    font-size: 0.8em;
-    transform: translateY(-40px);
+  .about-us h2 span {
+    font-size: 0.6em;
+    transform: translateY(0);
   }
 
   .about-us-buttons a {
@@ -732,16 +750,48 @@ footer h2 {
     margin: 0;
   }
 
+  .product-wrapper h1 {
+    color: transparent;
+  }
+
   .product {
     grid-template-columns: auto;
+  }
+  .product a:hover img {
+    transform: unset;
+  }
+  .product a:hover .text {
+    transform: unset;
+  }
+
+  .product-box-wrapper h1 {
+    color: transparent;
+  }
+
+  .product-box .product-img {
+    grid-template-columns: auto;
+  }
+  .product-box .product-data {
+    flex-direction: column;
+  }
+
+  .contact-wrapper h1 {
+    color: transparent;
   }
 
   .contact {
     height: unset;
     flex-direction: column;
   }
+  .contact .contact-box {
+    margin-bottom: 30px;
+  }
   .contact .offer-box {
     margin: 0;
+  }
+
+  footer img {
+    width: 250px;
   }
 }
 

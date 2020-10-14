@@ -3,22 +3,25 @@ $(document).ready(function(){
         $(".nav-btn").click( () => {
             $("nav").slideToggle()
         });
-        
-        // Page test for link colors
-        let contact = /kapcsolat/;
-        let pruduct = /index/;
-        let page = window.location.href;
 
-        if (contact.test(page)) {
-            console.log("true");
-            
-        } else {
-            console.log(false);
+        // Page test for link color
+        let index = /index/,
+            services = /szolgaltatasok/,
+            garage = /szerviz/,
+            contact = /kapcsolat/,
+            pages = [index, services, garage, contact],
+            navLinks = document.querySelectorAll("nav a"),
+            url = window.location.href;
+
+        for (let i = 0; i < pages.length; ++i) {
+            if (pages[i].test(url)) {
+                navLinks[i].classList.add("nav-active-link");
+            }
         }
-        
     });
 });
 
+// Header scroll effect
 window.onscroll = () => {
     let headerWrapper = document.querySelector(".header-wrapper");
     let nav = document.querySelector("nav");

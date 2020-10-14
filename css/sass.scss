@@ -84,9 +84,10 @@ header {
 }
 
 .header-logo {
-    font-size: 1.5em;
-    font-weight: 700;
-    letter-spacing: 2px;
+
+    img {
+        width: 200px;
+    }
 }
 
 
@@ -181,6 +182,7 @@ nav {
     height: 100%;
     display: flex;
     align-items: center;
+    opacity: 0;
     transition: 2s;
 }
 
@@ -239,7 +241,7 @@ nav {
 .about-us {
     width: 100%;
     max-width: 1200px;
-    margin: 200px auto;
+    margin: 100px auto;
     text-align: center;
 
     h2 {
@@ -290,13 +292,17 @@ nav {
     transition: .5s;
 }
 
+.about-us-logo {
+    margin-top: 100px;
+}
+
 
 /* =============== PRODUCT =============== */
 
 .product-wrapper {
     width: 100%;
     text-align: center;
-    margin: 200px 0 100px 0;
+    margin: 100px 0;
 
     h1 {
         @include h1-style;
@@ -428,13 +434,22 @@ nav {
         .product-description {
             flex-grow: 1;
             flex-basis: 0;
-            padding-right: 40px;
+            padding: 0 40px;
         }
 
         .product-details {
             flex-grow: 1;
             flex-basis: 0;
-            padding-left: 20px;
+            padding: 0 40px;
+
+            .download {
+                color: rgb(60, 60, 245);
+                cursor: pointer;
+            }
+
+            .download:hover {
+                text-decoration: underline;
+            }
         }
     }
 }
@@ -645,12 +660,9 @@ footer {
     text-align: center;
     background: #282c2c;
 
-    h2 {
-        font-size: 4em;
-        font-family: 'Montserrat', sans-serif;
-        margin: 0;
-        padding: 80px;
-        color: rgb(136, 165, 102);
+    img {
+        width: 400px;
+        padding: 50px 0;
     }
 }
 
@@ -663,6 +675,7 @@ footer {
 
     nav {
         height: unset;
+        width: 100%;
         display: none;
         position: fixed;
         top: 100px;
@@ -745,9 +758,13 @@ footer {
                 border-width: 0 10px 10px 10px;
                 border-style: solid;
                 border-color: white;
+                display: flex;
+                align-items: center;
     
                 .text {
-                    margin: 40px 0 0 40px;
+                    margin: 0 0 0 50px;
+                    text-align: left;
+                    transform: unset;
                 }
             }
         }
@@ -774,19 +791,24 @@ footer {
     }
 
     .slider-wrapper {
-        height: unset;
         margin-top: 100px;
     }
 
     .slider {
-        height: unset;
         max-width: 100%;
         flex-direction: column;
         justify-content: center;
     }
 
+    .slider-page {
+        display: flex;
+        flex-direction: column;
+    }
+
     .slider-text {
         text-align: center;
+        flex-grow: 0;
+        flex-basis: 0;
 
         h3 {
             font-size: 2em;
@@ -800,7 +822,7 @@ footer {
     .slider-img {
 
         img {
-            max-width: 600px;
+            width: 300px;
             height: auto;
         }
     }
@@ -808,12 +830,13 @@ footer {
     .about-us {
         margin: 100px 0;
 
-        h1 {
-            font-size: 2.5em;
+        h2 {
+            font-size: 3.5em;
+            color: transparent;
 
             span {
-                font-size: .8em;
-                transform: translateY(-40px);
+                font-size: .6em;
+                transform: translateY(0);
             }
         }
     }
@@ -826,16 +849,67 @@ footer {
         }
     }
 
+    .product-wrapper {
+
+        h1 {
+            color: transparent;
+        }
+    }
+
     .product {
         grid-template-columns: auto;
+
+        a:hover img {
+            transform: unset;
+        }
+    
+        a:hover .text {
+            transform: unset;
+        }
+    }
+
+    .product-box-wrapper {
+
+        h1 {
+            color: transparent;
+        }
+    }
+
+    .product-box {
+
+        .product-img {
+            grid-template-columns: auto;
+        }
+
+        .product-data {
+            flex-direction: column;
+        }
+    }
+
+    .contact-wrapper {
+
+        h1 {
+            color: transparent;
+        }
     }
 
     .contact {
         height: unset;
         flex-direction: column;
 
+        .contact-box {
+            margin-bottom: 30px;
+        }
+
         .offer-box {
             margin: 0;
+        }
+    }
+
+    footer {
+
+        img {
+            width: 250px;
         }
     }
 }

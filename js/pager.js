@@ -1,13 +1,13 @@
 // About us pager
 let calypsoDescription = {
-    branding: `<p>We're a close team of creatives, designers & developers who work together to create beautiful, engaging digital experiences. Our team is specially designed to create successful, custom, innovative digital products from the initial concept through full product launch. From whiteboard sketches to pixel-perfect designs.</p>
-    <p>We take pride in delivering only the best. We're an agency born out of a passion to make great products. We help companies and startups from all over the world materialize their ideas into great projects.</p>`,
+    branding: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat autem vel eum iure reprehenderit id est laborum et dolorum fuga officia deserunt mollitia animi.</p>
+    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.</p>`,
 
-    development: `<p>Lorem We're a close team of creatives, designers & developers who work together to create beautiful, engaging digital experiences. Our team is specially designed to create successful, custom, innovative digital products from the initial concept through full product launch. From whiteboard sketches to pixel-perfect designs.</p>
-    <p>We take pride in delivering only the best. We're an agency born out of a passion to make great products. We help companies and startups from all over the world materialize their ideas into great projects.</p>`,
+    development: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat autem vel eum iure reprehenderit id est laborum et dolorum fuga officia deserunt mollitia animi.</p>
+    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.</p>`,
 
-    photography: `<p>We're a close team of creatives, designers & developers who work together to create beautiful, engaging digital experiences. Our team is specially designed to create successful, custom, innovative digital products from the initial concept through full product launch. From whiteboard sketches to pixel-perfect designs.</p>
-    <p>We take pride in delivering only the best. We're an agency born out of a passion to make great products. We help companies and startups from all over the world materialize their ideas into great projects.</p>`
+    photography: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat autem vel eum iure reprehenderit id est laborum et dolorum fuga officia deserunt mollitia animi.</p>
+    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.</p>`
 };
 
 let aboutUs = document.querySelector(".about-us-description"),
