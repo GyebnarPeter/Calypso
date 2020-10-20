@@ -6,10 +6,12 @@ $(document).ready(function(){
 
         // Page test for link color
         let index = /index/,
-            services = /szolgaltatasok/,
-            garage = /szerviz/,
+            promo = /promociok/,
+            support = /support/,
+            highlighted = /kiemelt/,
+            current = /aktualis/,
             contact = /kapcsolat/,
-            pages = [index, services, garage, contact],
+            pages = [index, promo, support, highlighted, current, contact],
             navLinks = document.querySelectorAll("nav a"),
             url = window.location.href;
 

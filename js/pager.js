@@ -1,22 +1,19 @@
 // About us pager
 let calypsoDescription = {
-    branding: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat autem vel eum iure reprehenderit id est laborum et dolorum fuga officia deserunt mollitia animi.</p>
+    advantages: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat autem vel eum iure reprehenderit id est laborum et dolorum fuga officia deserunt mollitia animi.</p>
     <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.</p>`,
 
-    development: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat autem vel eum iure reprehenderit id est laborum et dolorum fuga officia deserunt mollitia animi.</p>
+    products: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat autem vel eum iure reprehenderit id est laborum et dolorum fuga officia deserunt mollitia animi.</p>
     <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.</p>`,
 
-    photography: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat autem vel eum iure reprehenderit id est laborum et dolorum fuga officia deserunt mollitia animi.</p>
+    support: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat autem vel eum iure reprehenderit id est laborum et dolorum fuga officia deserunt mollitia animi.</p>
     <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.</p>`
 };
 
 let aboutUs = document.querySelector(".about-us-description"),
-    aboutUsLinks = document.querySelectorAll(".about-us-buttons a"),
-    branding = document.querySelector(".branding"),
-    development = document.querySelector(".development"),
-    photography = document.querySelector(".photography");
+    aboutUsLinks = document.querySelectorAll(".about-us-buttons a");
 
-aboutUs.innerHTML = calypsoDescription.branding;
+aboutUs.innerHTML = calypsoDescription.advantages;
 
 let changeText = (id) => {
     aboutUs.style.opacity = 0;

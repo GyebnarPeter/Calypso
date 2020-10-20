@@ -340,6 +340,9 @@ nav ul li:first-child:before {
 .product a:hover .text {
   transform: translateX(-10px);
 }
+.product a:hover .product-category {
+  opacity: 0;
+}
 
 /* =============== PRODUCT BOX =============== */
 .product-box-wrapper {
@@ -408,6 +411,10 @@ nav ul li:first-child:before {
 }
 .product-box .product-data .product-details .download:hover {
   text-decoration: underline;
+}
+
+.tools {
+  margin-top: 200px;
 }
 
 /* =============== CONTACT =============== */
@@ -762,6 +769,9 @@ footer img {
   }
   .product a:hover .text {
     transform: unset;
+  }
+  .product .product-category {
+    display: none;
   }
 
   .product-box-wrapper h1 {

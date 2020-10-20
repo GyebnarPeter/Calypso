@@ -379,6 +379,10 @@ nav {
     a:hover .text {
         transform: translateX(-10px);
     }
+
+    a:hover .product-category {
+        opacity: 0;
+    }
 }
 
 
@@ -452,6 +456,10 @@ nav {
             }
         }
     }
+}
+
+.tools {
+    margin-top: 200px;
 }
 
 
@@ -865,6 +873,10 @@ footer {
     
         a:hover .text {
             transform: unset;
+        }
+
+        .product-category {
+            display: none;
         }
     }
 
